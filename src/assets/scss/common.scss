@@ -1,0 +1,64 @@
+html,
+body,
+.os-container {
+  height: 100vh;
+  width: 100vw;
+  min-width: 800px;
+  min-height: 600px;
+  position: relative;
+}
+
+.os-container {
+  display: flex;
+  flex-direction: column;
+
+  .desktop-view {
+    flex: 1;
+    background-size: cover;
+    position: relative;
+  }
+}
+
+.right-menu {
+  box-shadow: 1px 5px 2px rgba(#000, .4);
+}
+
+.task-menu {
+  width: 300px;
+  background: #2b2b2b;
+  border: 1px solid #a0a0a0;
+  padding: 8px 10px;
+
+  .menu-item {
+    color: #fff;
+    line-height: 32px;
+    height: 32px;
+    font-size: 12px;
+    display: block;
+    position: relative;
+    overflow: unset;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      left: -8px;
+      right: -8px;
+      background-color: #414141;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    &:hover {
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
