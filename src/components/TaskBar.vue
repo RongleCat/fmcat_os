@@ -23,7 +23,7 @@ export default {
         boxClass: 'right-menu,task-menu',
         menus: [
           {
-            content: '<span>切换任务栏大小</span>',
+            content: '<span>使用小任务栏按钮</span>',
             callback: 'changeSize',
             optionClass: 'menu-item'
           }
@@ -37,6 +37,7 @@ export default {
   methods: {
     changeSize() {
       this.size = this.size ? 0 : 1
+      this.menudata.menus.content = this.size?'<span>使用小任务栏按钮</span>':'<span>使用大任务栏按钮</span>'
       this.$ls.set('taskBarSize', this.size)
     }
   }

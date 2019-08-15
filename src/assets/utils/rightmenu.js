@@ -1,5 +1,3 @@
-
-
 export default {
   // 调用use时候执行该方法
   install: function (Vue, options) {
@@ -23,7 +21,7 @@ export default {
          * 增加一个遮罩层方便我控制菜单显示时候取消其余事件
          */
         var Mask = document.createElement("div");
-        var Maskstyle = "position:fixed;top:0;left:0;width:100%;height:100%;z-index:99997;"
+        var Maskstyle = "position:fixed;top:0;left:0;width:100%;height:100%;z-index:10;"
         Mask.style = Maskstyle + "display:none";
         Mask.setAttribute("id", "TT_MASK");
         document.body.appendChild(Mask);

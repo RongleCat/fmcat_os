@@ -1,1 +1,34 @@
 $m:#333;
+
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden
+  }
+
+  zoom: 1;
+}
+
+@mixin textOneLine {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin textMultipleLine($number:2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+}
+
+@mixin tapColor($value:0.98) {
+  &:active {
+    filter: brightness($value) contrast(100%);
+  }
+}
